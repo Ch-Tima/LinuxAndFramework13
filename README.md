@@ -25,6 +25,9 @@
 
         sudo systemctl restart sddm
 
+  - Smart gestures for touchpad:
 
-    TODO
+        $ sudo pacman -Syu touchegg
+        $ sudo systemctl enable touchegg.service
+        $ sudo systemctl start touchegg 
 
