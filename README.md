@@ -46,23 +46,27 @@
 
        nano ~/.zshrc
    
-   Add to the last line -> **export PATH=$PATH:/opt/android-studio/bin**
+     Add to the last line -> **export PATH=$PATH:/opt/android-studio/bin**
 
 - Icon
 
       nano ~/.local/share/application/android-studio.desktop
 
-  Insert:
-
-      [Desktop Entry]
-      Version=1.0
-      Type=Application
-      Name=Android Studio
-      Exec=/opt/android-studio/bin/studio.sh
-      Icon=/opt/android-studio/bin/studio.png
-      Terminal=false
-      Categories=Development;IDE;
-      StartupNotify=true
+    Insert:
+  
+        [Desktop Entry]
+        Version=1.0
+        Type=Application
+        Name=Android Studio
+        Exec=/opt/android-studio/bin/studio.sh
+        Icon=/opt/android-studio/bin/studio.png
+        Terminal=false
+        Categories=Development;IDE;
+        StartupNotify=true
+  
+    Last:
+  
+      chmod +x ~/.local/share/applications/android-studio.desktop
 
         
 
