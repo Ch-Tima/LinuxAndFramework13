@@ -41,7 +41,7 @@
         $ sudo pacman -Syu touche
 
 
-### Install .tar.gz (AndroidStudio)
+### Install .tar.gz ([AndroidStudio](https://developer.android.com/studio))
   - Extract
 
         sudo tar -xvzf android-studio-*.tar.gz -C /opt
