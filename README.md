@@ -2,9 +2,13 @@
 
 ### First Start&Proplems:
   - Windows and Icons Too Small:
-    soutions: System Setting -> Display&Monitore -> Globale scale
+
+      soutions: __System Setting -> Display&Monitore -> Globale scale__
+    
   - Small login form
-    soutions:
+
+    
+      soutions:
 
          sudo nano /etc/sddm.conf
 
@@ -41,6 +45,10 @@
   - Extract
 
         sudo tar -xvzf android-studio-*.tar.gz -C /opt
+
+  - To start the application (*android-studio/bin/studio.sh*)
+
+        ./studio.sh
 
  - PATH .zshrc
 
