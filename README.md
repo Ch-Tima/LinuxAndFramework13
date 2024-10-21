@@ -34,7 +34,36 @@
     
   - Insatll [touche](https://github.com/JoseExposito/touche)
 
-        $ sudo pacman -Syu touche 
+        $ sudo pacman -Syu touche
 
+
+### Install .tar.gz (AndroidStudio)
+  - Extract
+
+        sudo tar -xvzf android-studio-*.tar.gz -C /opt
+
+ - PATH .zshrc
+
+       nano ~/.zshrc
+   
+   Add to the last line -> **export PATH=$PATH:/opt/android-studio/bin**
+
+- Icon
+
+      nano ~/.local/share/application/android-studio.desktop
+
+  Insert:
+
+      [Desktop Entry]
+      Version=1.0
+      Type=Application
+      Name=Android Studio
+      Exec=/opt/android-studio/bin/studio.sh
+      Icon=/opt/android-studio/bin/studio.png
+      Terminal=false
+      Categories=Development;IDE;
+      StartupNotify=true
+
+        
 
 
