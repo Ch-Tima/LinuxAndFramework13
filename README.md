@@ -40,6 +40,27 @@
 
         $ sudo pacman -Syu touche
 
+  - Installing the script:
+
+        Place gesture_srcipt.sh in /home/$USER/.config/touchegg/
+        Don't forget to set your `$USER` in the script path.
+
+        $ sudo pacman -S xdotool
+        $ sudo chmod +x  /home/$USER/.config/touchegg/gesture_srcipt.sh #optional
+
+### Features
+ - **Four-Finger Swipe Gestures**:
+      - Swipe left to navigate right (`Ctrl + Super + Right`)
+      - Swipe right to navigate left (`Ctrl + Super + Left`)
+      - Swipe down to minimize (`Ctrl + Super + Down`)
+      - Swipe up to maximize (`Ctrl + Super + Up`)
+ - **Three-Finger Swipe Gestures**:              
+      - Swipe up to launch Google Chrome (`Super + G`)     
+      - Swipe down to execute a custom script for additional actions.               
+ - **Pinch Gestures**:               
+      - Pinch out to zoom in (`Super + =`)       
+      - Pinch in to zoom out (`Super + -`)
+
 
 ### Install .tar.gz ([AndroidStudio](https://developer.android.com/studio))
   - Extract
