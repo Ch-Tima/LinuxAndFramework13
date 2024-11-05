@@ -50,13 +50,12 @@
 
 ### Features
  - **Four-Finger Swipe Gestures**:
-      - Swipe left to navigate right (`Ctrl + Super + Right`)
-      - Swipe right to navigate left (`Ctrl + Super + Left`)
-      - Swipe down to minimize (`Ctrl + Super + Down`)
-      - Swipe up to maximize (`Ctrl + Super + Up`)
+      - **Swipe Left/Right**: Show the next virtual desktop on the horizontal axis. (`Ctrl + Super + Right/Left`)
+      - **Swipe Up/Down**: Show the next virtual desktop on the vertical axis. (`Ctrl + Super + Up/Down`)
+
  - **Three-Finger Swipe Gestures**:              
-      - Swipe up to launch Google Chrome (`Super + G`)     
-      - Swipe down to execute a custom script for additional actions.               
+      - **Swipe Up**: Show the virtual desktop overview. 
+      - **Swipe Down**: Close the virtual desktop overview and open the dashboard.          
  - **Pinch Gestures**:               
       - Pinch out to zoom in (`Super + =`)       
       - Pinch in to zoom out (`Super + -`)
