@@ -48,6 +48,41 @@
         $ sudo pacman -S xdotool
         $ sudo chmod +x  /home/$USER/.config/touchegg/gesture_srcipt.sh #optional
 
+
+  
+  ### NTFS
+      An error occurred while accessing 'K256', the system responded: 
+      The requested operation has failed: 
+      Error mounting /dev/sda1 at /run/media/tim/K256: 
+      wrong fs type, bad option, bad superblock on /dev/sda1, 
+      missing codepage or helper program, or other error.
+
+- Check Disk Information
+      
+      $ lsblk
+      NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+      sda           8:0    0 238.5G  0 disk 
+      └─sda1        8:1    0 238.5G  0 part 
+      nvme0n1     259:0    0 931.5G  0 disk 
+      ├─nvme0n1p1 259:1    0   512M  0 part /boot/efi
+      └─nvme0n1p2 259:2    0   931G  0 part /
+
+      $ sudo blkid /dev/sda1
+      /dev/sda1: LABEL="K256" BLOCK_SIZE="512" UUID="0488E02C88E01DC4" TYPE="ntfs" PARTUUID="228d4d16-01"
+- Install NTFS-3G
+
+      sudo pacman -S ntfs-3g
+- Fix
+
+      sudo ntfsfix /dev/sda1
+- Try Mounting Manually
+
+      sudo mount -t ntfs-3g /dev/sda1 /mnt
+- Check Kernel Logs for Errors
+
+      sudo dmesg | tail -n 20
+
+
 ### Features
  - **Four-Finger Swipe Gestures**:
       - **Swipe Left/Right**: Show the next virtual desktop on the horizontal axis. (`Ctrl + Super + Right/Left`)
