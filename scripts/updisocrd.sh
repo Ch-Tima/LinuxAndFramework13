@@ -1,5 +1,5 @@
 #! /bin/bash
-# 0.1v
+# 0.2v
 if [ $(whoami) != 'root' ]; then
         echo "Please use 'sudo' to run me!"
         exit -1;
@@ -28,8 +28,18 @@ if [ "$NF_PKG" != "" ]; then
 	exit -2
 fi
 
+# default values
+CLEAR_AFTER=false
+BACKUP=false
 
-CLEAR_AFTER=true
+# parse command-line options
+while getopts "cb" opt; do
+    case "$opt" in
+        c) CLEAR_AFTER=true ;;
+        b) BACKUP=true ;;
+    esac
+done
+
 API="https://discord.com/api/download/stable?platform=linux&format=tar.gz"
 DIR_SAVE="/tmp"
 FILENAME="discord.tar.gz"
@@ -40,7 +50,7 @@ echo "Downloading Discord..."
 wget -O "${DIR_SAVE}/${FILENAME}" $API
 
 # unzip .tar.gz
-echo "Extracting Discord...
+echo "Extracting Discord..."
 sudo tar -xvzf "${DIR_SAVE}/${FILENAME}" -C "${DIR_SAVE}"
 
 # rename
@@ -51,6 +61,14 @@ mv "${DIR_SAVE}/Discord" "${DIR_SAVE}/discord"
 echo "Moving Discord to /opt..."
 sudo cp -rf "${DIR_SAVE}/${FILENAME%%.*}" /opt/
 
+# Cleanup if -c is set
+if [ "$CLEAR_AFTER" = true ]; then
+    echo "Cleaning up temporary files..."
+    sudo rm -rf "${DIR_SAVE}/${FILENAME}"
+    sudo rm -rf "${DIR_SAVE}/${FILENAME%%.*}"
+fi
+
 # Ok
 echo "Installation completed successfully!"
 exit 0
+
