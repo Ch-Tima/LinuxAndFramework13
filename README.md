@@ -1,4 +1,4 @@
-# Manjaro KDE Framework 13 Setting
+# ArchLinxu Framework 13 Setting
 
 ### First Start&Proplems:
   - Windows and Icons Too Small:
