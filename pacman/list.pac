@@ -6,11 +6,11 @@ LIBOFFICE_STILL="libreoffice-still libreoffice-still-ru libreoffice-still-pl lib
 
 DM="sddm plasma"
 
-TERMINAL="kitty"
+TERMINAL="kitty yakuake"
 
-TERMINAL_TOOLS="tree wget"
+TERMINAL_COMMANDS="tree wget"
 
-FILEMANAGER="lf dolphin baobab ncdu"
+FILEMANAGER="lf dolphin baobab ncdu ark unrar"
 
 EDITOR="nano vim"
 
@@ -18,4 +18,10 @@ BROWSE="firfox"
 
 DISK_COM="ntfs-3g android-file-transfer mtpfs gvfs-mtp"
 
-OTHER="docker"
+LANG="python jdk-openjdk jdk8-openjdk cmake"
+
+IMAGE_VIEW="sxiv"
+
+POWER="tlp psensor"
+
+TOOLS="git yay docker vsftpd putty filezilla"
