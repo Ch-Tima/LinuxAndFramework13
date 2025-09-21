@@ -16,7 +16,7 @@ EDITOR="nano vim"
 
 BROWSE="firfox"
 
-DISK_COM="ntfs-3g android-file-transfer mtpfs gvfs-mtp"
+DISK_COM="ntfs-3g android-file-transfer mtpfs gvfs-mtp fuse-exfat exfatprogs"
 
 LANG="python jdk-openjdk jdk8-openjdk cmake"
 
